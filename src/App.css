@@ -540,7 +540,7 @@ tbody tr:last-child td {
     z-index: 9999;
     width: 30%;
   }
-
+  
   .nav-links.open {
     display: flex;
   }
@@ -567,5 +567,13 @@ tbody tr:last-child td {
 
   .navbar-inner {
     justify-content: space-between;
+  }
+
+  .popup-content {
+        max-width: 80vw;
+  }
+
+  .popup-overlay {
+    padding: 0;
   }
 }
