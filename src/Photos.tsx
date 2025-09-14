@@ -20,7 +20,7 @@ const Photos = () => {
       console.error("Failed to load images", err);
     }
   };
-
+  
   const imagePath = (filename: string) => {
     if (!currentFolderPath) return "";
     const { year, folder } = currentFolderPath;
