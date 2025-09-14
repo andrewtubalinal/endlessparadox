@@ -581,14 +581,22 @@ tbody tr:last-child td {
   .spots-box {
     max-height: 700px;
   }
+
+  .home {
+    min-height: calc(100vh - 120px);
+  }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 500px) {
   .logo-container > img {
     width: 20%;
   }
 
   .navbar-inner {
     max-height: 30px;
+  }
+
+  .home {
+    min-height: calc(100vh - 60px);
   }
 }
