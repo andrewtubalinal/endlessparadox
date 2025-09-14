@@ -540,7 +540,7 @@ tbody tr:last-child td {
     z-index: 9999;
     width: 30%;
   }
-  
+
   .nav-links.open {
     display: flex;
   }
@@ -570,10 +570,20 @@ tbody tr:last-child td {
   }
 
   .popup-content {
-        max-width: 80vw;
+    max-width: 80vw;
   }
 
   .popup-overlay {
     padding: 0;
+  }
+}
+
+@media (max-height: 400px) {
+  .logo-container > img {
+    width: 20%;
+  }
+
+  .navbar-inner {
+    max-height: 30px;
   }
 }
