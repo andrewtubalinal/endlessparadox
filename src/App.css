@@ -19,7 +19,7 @@ body {
     0,
     0,
     0,
-    0.6
+    0.7
   ); /* light transparent overlay for readability */
 }
 
@@ -72,7 +72,6 @@ nav.navbar {
   justify-content: space-between;
   align-items: center;
 }
-
 
 .nav-links {
   width: 70%;
@@ -293,13 +292,13 @@ tbody tr:last-child td {
 
 /* Role-based row colors */
 .guild-leader td {
-  background: linear-gradient(90deg, #FFD700, #FFC107);
+  background: linear-gradient(90deg, #ff2f00d9, #ff2f00d9);
   color: #000;
   font-weight: bold;
 }
 
 .vice-leader td {
-  background: linear-gradient(90deg, #C0C0C0, #D3D3D3);
+  background: linear-gradient(90deg, #c0c0c0, #d3d3d3);
   color: #000;
   font-weight: bold;
 }
@@ -316,8 +315,8 @@ tbody tr:last-child td {
 }
 
 .treasurer td {
-  background: rgba(255, 215, 0, 0.15); /* gold highlight */
-  color: #ffd700;
+  background: rgba(255, 141, 161, 0.75); /* gold highlight */
+  color: #fff;
   font-weight: bold;
 }
 
