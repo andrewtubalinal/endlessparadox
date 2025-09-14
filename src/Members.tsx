@@ -6,6 +6,7 @@ const Members = () => {
   const viceLeaders = [
     "V3zh",
     "Jin Durian",
+    "Aster Durian",
     "XxGRIMxX",
     "Mi♥haela LVL999",
     "UnHARMED",
@@ -25,7 +26,6 @@ const Members = () => {
     "ＭＡＲＫＯ",
     "Sir G",
     "blaze028",
-    "Aster Durian", // <- Treasurer
     "神kio.",
     "+Athena+",
     "『CLOUD",
@@ -131,7 +131,6 @@ const Members = () => {
 
               let role = "Member";
               if (isNoticeChanger) role = "Member (can change Guild Notice)";
-              if (isTreasurer) role = "Treasurer";
 
               return (
                 <tr

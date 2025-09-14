@@ -8,29 +8,34 @@ function Events() {
       </p>
 
       {/* Upcoming Events */}
-      <div className="event-box">
-        <h3>Upcoming: Boss Hunt Marathon</h3>
-        <p>
-          Date: September 30, 2025 <br />
-          Gather with guildmates for an all-day boss hunt event! Drops, EXP,
-          and fun guaranteed.
-        </p>
-      </div>
 
       <div className="event-box">
-        <h3>Upcoming: Guild Party</h3>
+        <h3>No upcoming events.</h3>
         <p>
-          Date: October 15, 2025 <br />
-          Celebrate the guild’s achievements with games, trivia, and prizes.
+          Check back later for more exciting guild activities!
         </p>
       </div>
 
       {/* Past Events */}
+
       <div className="event-box past">
-        <h3>Past: Anniversary Celebration</h3>
+        <h3>Guild Raid - Wind Element</h3>
         <p>
-          Held on August 20, 2025 — A special event celebrating Endless Paradox
-          with fireworks, contests, and fun memories.
+          Held on September 14, 2025.
+        </p>
+      </div>
+      
+      <div className="event-box past">
+        <h3>Guild Pictorial - Night Saltau Beach</h3>
+        <p>
+          Held on September 09, 2025.
+        </p>
+      </div>
+
+      <div className="event-box past">
+        <h3>Guild Raid - Fire Element</h3>
+        <p>
+          Held on September 07, 2025.
         </p>
       </div>
     </section>

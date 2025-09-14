@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./Navigation";
 import Home from "./Home";
-import Budgets from "./Budgets";
+import Photos from "./Photos";
 import Events from "./Events";
 import Leveling from "./Leveling";
 import Members from "./Members";
@@ -18,7 +18,7 @@ function App() {
           <Routes>
             {/* Example route placeholders */}
             <Route path="/" element={<Home />} />
-            <Route path="/budgets" element={<Budgets />} />
+            <Route path="/photos" element={<Photos />} />
             <Route path="/events" element={<Events />} />
             <Route path="/leveling" element={<Leveling />} />
             <Route path="/notice" element={<Notice />} />
