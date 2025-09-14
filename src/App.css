@@ -188,7 +188,7 @@ nav.navbar {
   border-radius: 8px;
   padding: 15px;
   background: rgba(255, 255, 255, 0.05);
-  max-height: 500px;
+  max-height: 620px;
   overflow-y: auto;
 }
 
@@ -525,7 +525,7 @@ tbody tr:last-child td {
 
   .section {
     padding: 0;
-    margin: 80px auto;
+    margin: 80px auto 40px;
   }
 
   .nav-links {
@@ -576,6 +576,10 @@ tbody tr:last-child td {
 
   .popup-overlay {
     padding: 0;
+  }
+
+  .spots-box {
+    max-height: 700px;
   }
 }
 
