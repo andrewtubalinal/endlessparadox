@@ -6,6 +6,7 @@ import Budgets from "./Budgets";
 import Events from "./Events";
 import Leveling from "./Leveling";
 import Members from "./Members";
+import Notice from "./Notice";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path="/budgets" element={<Budgets />} />
             <Route path="/events" element={<Events />} />
             <Route path="/leveling" element={<Leveling />} />
-            <Route path="/updates" element={<h2>Updates</h2>} />
+            <Route path="/notice" element={<Notice />} />
             <Route path="/members" element={<Members />} />
           </Routes>
         </div>
