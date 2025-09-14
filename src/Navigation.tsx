@@ -6,7 +6,7 @@ function Navigation() {
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="logo-container">
-          <img src="assets/logo-transparent.png" alt="Guild Logo" />
+          <img src="logo-transparent.png" alt="Guild Logo" />
         </div>
         <div className="nav-links">
           <Link to="/"><Home size={18}/> Home</Link>
