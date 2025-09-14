@@ -503,3 +503,69 @@ tbody tr:last-child td {
   background-color: #ddd;
 }
 
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+/* Mobile & tablet breakpoint */
+@media (max-width: 900px) {
+  .logo-container > img {
+    width: 40%;
+  }
+
+  .subwrapper {
+    width: 89%;
+  }
+
+  .section {
+    padding: 0;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px; /* height of navbar */
+    /* left: 0; */
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    z-index: 9999;
+    width: 30%;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo-container {
+    width: 40%; /* adjust to fit with hamburger */
+  }
+
+  .navbar-inner {
+    justify-content: space-between;
+  }
+}
