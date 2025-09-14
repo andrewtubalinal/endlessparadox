@@ -445,7 +445,7 @@ tbody tr:last-child td {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  max-height: 200px;
+  max-height: 500px;
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.5rem;
@@ -488,7 +488,7 @@ tbody tr:last-child td {
 
 /* Close Button */
 .popup-content button {
-  align-self: flex-start;
+  align-self: flex-end;
   padding: 0.4rem 1rem;
   background-color: #eee;
   border: 1px solid #ccc;
