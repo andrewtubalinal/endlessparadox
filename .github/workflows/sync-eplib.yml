@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync-eplib:
     runs-on: ubuntu-latest
@@ -17,7 +20,7 @@ jobs:
       - name: Clone eplib repo
         run: |
           git clone https://x-access-token:${{ secrets.EPLIB_PAT }}@github.com/andrewtubalinal/eplib.git temp/eplib
-
+      
       - name: Copy .txt files from root of eplib to public/assets
         run: |
           mkdir -p public/assets
