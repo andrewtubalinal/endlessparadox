@@ -337,6 +337,7 @@ tbody tr:last-child td {
   font-size: 1rem;
   color: #eee;
   white-space: pre-line;
+  line-height: 1.5;
 }
 
 .notice-edit {
@@ -371,7 +372,6 @@ tbody tr:last-child td {
 .page-description {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  max-width: 600px;
   color: #bbb;
 }
 

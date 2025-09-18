@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 const Notice = () => {
+  const [noticeText, setNoticeText] = useState("");
+
+  useEffect(() => {
+    fetch("/notice.txt")
+      .then((res) => res.text())
+      .then((text) => setNoticeText(text))
+      .catch(() => setNoticeText("Failed to load the notice."));
+  }, []);
+  
   return (
     <section className="section">
       <h2 className="page-title">Guild Notice</h2>
@@ -10,10 +20,8 @@ const Notice = () => {
 
       <div className="notice-box">
         <h3>Current Notice</h3>
-        <p className="notice-text">
-          Welcome to Endless Paradox!  
-          Stay friendly, respect each other, and enjoy the journey.  
-          Remember: no drama, no toxicity — just pure fun! ✨
+        <p className="notice-text" style={{ whiteSpace: "pre-wrap" }}>
+          {noticeText || "Loading notice..."}
         </p>
       </div>
     </section>

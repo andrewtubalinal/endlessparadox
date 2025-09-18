@@ -1,6 +1,41 @@
-import { events } from "./eventData"; // ✅ use shared data
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
-function Events() {
+interface Event {
+  title: string;
+  date: string;
+  past: boolean;
+}
+
+const parseEvents = (text: string): Event[] => {
+  return text
+    .trim()
+    .split("\n")
+    .map((line) => {
+      const [title, date, past] = line.split("|");
+      return {
+        title: title.trim(),
+        date: date.trim(),
+        past: past.trim().toLowerCase() === "true",
+      };
+    });
+};
+
+const Events = () => {
+  const [events, setEvents] = useState<Event[]>([]);
+
+  useEffect(() => {
+    fetch("/events.txt")
+      .then((res) => res.text())
+      .then((text) => {
+        const parsed = parseEvents(text);
+        setEvents(parsed);
+      })
+      .catch((err) => {
+        console.error("Failed to load events.txt", err);
+      });
+  }, []);
+
   return (
     <section className="section">
       <h2 className="page-title">Guild Events</h2>
@@ -9,7 +44,6 @@ function Events() {
         activities, boss hunts, and community gatherings!
       </p>
 
-      {/* Optional: Show message if no events */}
       {events.length === 0 && (
         <div className="event-box">
           <h3>No upcoming events.</h3>
@@ -25,6 +59,6 @@ function Events() {
       ))}
     </section>
   );
-}
+};
 
 export default Events;

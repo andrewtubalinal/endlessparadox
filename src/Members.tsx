@@ -1,107 +1,66 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
+interface Member {
+  name: string;
+  role: string;
+}
+
+const parseNotepad = (notepadData: string): Member[] => {
+  const lines = notepadData.trim().split("\n");
+
+  return lines
+    .map((line) => {
+      // Extract name and role tag like <gm>, <vgm>, <mem>, <old>
+      const regex = /^(.*?)(<[^>]*>)$/;
+      const match = line.trim().match(regex);
+
+      if (match) {
+        const name = match[1].trim();
+        const roleTag = match[2].replace(/<|>/g, "").trim();
+
+        if (!roleTag) {
+          // role tag is empty -> ignore this line
+          return null;
+        }
+
+        let role = "Member";
+        if (roleTag === "gm") role = "Guild Leader 👑";
+        else if (roleTag === "vgm") role = "Vice Guild Leader 👑 (Silver)";
+        else if (roleTag === "mem") role = "Member";
+        else if (roleTag === "old") role = "Past Member";
+        else {
+          // Unknown role tag - ignore line
+          return null;
+        }
+
+        return { name, role };
+      }
+      // No role tag -> ignore this line
+      return null;
+    })
+    .filter((member): member is Member => member !== null); // filter out nulls
+};
+
 const Members = () => {
-  const guildLeader = ["「Ａｃｅ＿０１」"];
+  const [members, setMembers] = useState<Member[]>([]);
 
-  const viceLeaders = [
-    "V3zh",
-    "Jin Durian",
-    "Aster Durian",
-    "XxGRIMxX",
-    "Mi♥haela LVL999",
-    "宇宙BlueFox™",
-    "Void♤",
-    "Arther Elf",
-    "MANGIT!",
-    "Kirara♡",
-  ];
-
-  const members = [
-    "Velphegorah",
-    "{YamiPH}™",
-    "FireEmbleM",
-    "Nazumid@",
-    "益Hysteria",
-    "Velphegor",
-    "ＭＡＲＫＯ",
-    "Sir G",
-    "blaze028",
-    "神kio.",
-    "+Athena+",
-    "『CLOUD",
-    "Rentaro100",
-    "Nishiki食欲",
-    "Ai Hayasaka.",
-    "bonjcheney",
-    "ＣＬＡＵＤＩＡＮ",
-    "Nymphaea",
-    "lilica",
-    "<ＭＩＤＯＲＩ>",
-    "juuichi",
-    "@Mars",
-    "Jack_101",
-    "Yaruchi Aoki",
-    "lelouch19",
-    "Ｑｕ３ｚｔツ",
-    "Celeste™",
-    "📜Pioneer!",
-    "Quintella",
-    "Hwaran.",
-    "Rø.",
-    "J3f",
-    "Sae itoshiアチ",
-    "Ernasis28",
-    "Purot",
-    "AcPlays3",
-    "宇宙BlueFox™",
-    "Min★",
-    "Warcry",
-    "nobody",
-    "pampam",
-    "RoCks.Ｄ.XeBec",
-    "BSE | Menn",
-    "GerroXD",
-    "Kazama168",
-    "--Sam--",
-    "Saint_Izumi",
-    "PITCH",
-    "Ha-ru",
-    "Stella",
-    "Ci",
-    "Serene",
-    "Agatha♡",
-    "sen",
-    "JinnyJin",
-    "tsukimiya",
-    "Azeusac",
-    "～♡Fuukachi♡～",
-    "Spid",
-    "Lucielツ",
-    "UnHARMED",
-    "雨を愛する人",
-    "📜KORUSO™",
-    "Shinji_27",
-    "Adrian_Tepes",
-    "Byncent",
-    "jstreet",
-    "zafkhiel",
-    "📜VenTus",
-    "ZPortgas",
-    "☆Frosch☆",
-    "LikE",
-  ];
-  
-  // 🆕 Old members (just example, replace with real ones)
-  const oldMembers = [
-    "No one yet"
-  ];
+  useEffect(() => {
+    fetch("/members.txt")
+      .then((res) => res.text())
+      .then((data) => {
+        const parsed = parseNotepad(data);
+        setMembers(parsed);
+      })
+      .catch((err) => {
+        console.error("Failed to load members.txt:", err);
+      });
+  }, []);
 
   return (
     <section className="section">
       <h2 className="page-title">Guild Members</h2>
-      <p className="page-description">
-        List of all guild members, organized by role.
-      </p>
+      <p className="page-description">List of all guild members, organized by role.</p>
 
       <div className="table-container">
         <table className="members-table">
@@ -112,51 +71,29 @@ const Members = () => {
             </tr>
           </thead>
           <tbody>
-            {guildLeader.map((name, i) => (
-              <tr key={`leader-${i}`} className="guild-leader">
-                <td>{name}</td>
-                <td>Guild Leader 👑</td>
-              </tr>
-            ))}
-
-            {viceLeaders.map((name, i) => (
-              <tr key={`vice-${i}`} className="vice-leader">
-                <td>{name}</td>
-                <td>Vice Guild Leader 👑 (Silver)</td>
-              </tr>
-            ))}
-
-            {members.map((name, i) => {
+            {members.map(({ name, role }, i) => {
               const isNoticeChanger = name.includes("📜");
               const isTreasurer = name === "Aster Durian";
 
-              let role = "Member";
-              if (isNoticeChanger) role = "Member (can change Guild Notice)";
+              let rowClass = "member";
+              if (role === "Guild Leader 👑") rowClass = "guild-leader";
+              else if (role === "Vice Guild Leader 👑 (Silver)") rowClass = "vice-leader";
+              else if (role === "Past Member") rowClass = "old-member";
+
+              if (isTreasurer) rowClass = "treasurer";
+              else if (isNoticeChanger) rowClass = "notice-changer";
+
+              let displayRole = role;
+              if (isNoticeChanger) displayRole = "Member (can change Guild Notice)";
+              if (isTreasurer) displayRole = "Treasurer";
 
               return (
-                <tr
-                  key={`member-${i}`}
-                  className={
-                    isTreasurer
-                      ? "treasurer"
-                      : isNoticeChanger
-                      ? "notice-changer"
-                      : "member"
-                  }
-                >
+                <tr key={`member-${i}`} className={rowClass}>
                   <td>{name}</td>
-                  <td>{role}</td>
+                  <td>{displayRole}</td>
                 </tr>
               );
             })}
-
-            {/* Old members section */}
-            {oldMembers.map((name, i) => (
-              <tr key={`old-${i}`} className="old-member">
-                <td>{name}</td>
-                <td>Past Member</td>
-              </tr>
-            ))}
           </tbody>
         </table>
       </div>
