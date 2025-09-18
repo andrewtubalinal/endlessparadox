@@ -1,0 +1,79 @@
+[CATEGORY|main|Toram Online Leveling Guide: Levels 1-300 (MQ & Non-MQ Paths)|Recommended monsters and locations for efficient leveling from Lv1 to Lv300.]
+
+1-37|Pova|Lonogo Canyon
+37-56|Bone Dragonewt|Ancient Empress Tomb
+56-68|Parasitized Dog|Lost Town: Square
+68-75|Flare Volg Nightmare|Fiery Volcano
+75-85|Masked Warrior Hard|Land Under Cultivation
+85-95|Masked Warrior Nightmare|Land Under Cultivation
+95-113|Don Yeti|Polde Ice Valley
+113-125|Cerberus Nightmare|Spring of Rebirth
+125-134|Lapin the Necromancer|Trace of Dark River
+134-145|Cerberus Ultimate|Spring of Rebirth
+145-155|Super Death Mushroom|Monster's Forest: Animal Trail
+155-164|Commander Golem|Lufenas Mansion: Entrance
+
+[CATEGORY|subtitle|CHAP 1 TO 7 MQ UNLOCK VENENA|Complete Main Quest up to Chapter 7: Chaotic Truth to unlock Venena]
+
+164-179|Venena Nightmare|Ultimea Palace: Throne
+179-184|Altoblepas|Rokoko Plains
+184-200|Venena Ultimate|Ultimea Palace: Throne
+
+[CATEGORY|subtitle|CHAP 7 TO 8 MQ UNLOCK FINSTERN|Complete Main Quest up to Chapter 8 to unlock Finstern]
+
+200-212|Finstern The Dark Dragon|Dark Dragon Shrine: Near the Top
+212-225|Kuzto|Labilans Sector: Square
+
+[CATEGORY|subtitle|CHAP 8 TO 10 MQ UNLOCK ARACHNIDEMON|Complete Main Quest up to Chapter 10 to unlock Arachnidemon]
+
+225-230|Espectro|Arche Valley: Area 1
+230-245|Arachnidemon Ultimate|Arche Valley: Depths
+230-245|Bullamius|Storage Yard: Area 2
+
+[CATEGORY|subtitle|CHAP 10 TO 11 MQ UNLOCK FERZEN THE ROCK DRAGON|Complete Main Quest up to Chapter 11 to unlock Ferzen]
+
+245-255|Ferzen the Rock Dragon|Guardian Forest: Giant Tree
+245-255|Ignitrus|Vulcani Crater Base
+
+[CATEGORY|subtitle|CHAP 11 TO 12 MQ UNLOCK TRICKSTER DRAGON MIMYUGON|Complete Main Quest up to Chapter 12 to unlock Trickster]
+
+255-265|Trickster Nightmare|Operation Zone: Cockpit Area
+265-275|Trus|Propulsion System Zone: Power Tank
+265-275|Red Ash Dragon Rudis Hard|Espuma Dome: Entrance
+265-275|Excodus|Stairway Vital Point
+275-285|Red Ash Dragon Rudis Nightmare|Espuma Dome: Entrance
+275-285|Trickster Ultimate|Operation Zone: Cockpit Area
+
+[CATEGORY|subtitle|CHAP 12 TO 14 MQ UNLOCK MULGOON|Complete Main Quest up to Chapter 14 to unlock Mulgoon]
+
+285-295|Mulgoon Hard|Menabra Plains
+285-295|Capo Profundo|Abandon District
+295-300|Mulgoon Nightmare|Menabra Plains
+295-300|Red Ash Dragon Rudis Ultimate|Espuma Dome: Entrance
+295-300|Dominaredor Ultimate|Frozen Falls: Area Depth
+300-305|Wiltileaf|Eumano Village Ruins
+
+[CATEGORY|main|Leveling/Farming Spots Optimized for LUK Characters (Non-MQ Focused)|]
+
+10-28|Lavarca|Rakau Plains
+28-40|Pova|Lonogo Canyon
+40-55|Bone Dragonewt|Ancient Empress's Tomb
+55-65|Parasitized Dog|Lost Town Square
+65-75|Mewte|Gravel Terrace
+75-85|Hangged Mummy|Lunagent Mountain
+85-100|Controlled knight+fighter|Dark Castle
+100-115|Underground Nemico|Ultimea Sewer: Southeast
+115-125|Lyark Specialist|Brahe Laboratory
+125-140|Meditating Potum|Heresy Corridor
+140-150|Blue Bubble|Shrine of Blessing Gods
+150-158|Ivy|Dark Dragon Shrine
+158-163|Toretta|Labilans Sector
+163-165|Coofer|Rokoko City Ruins
+165-175|Weltacle|Recetacula Sector
+175-195|Bo Peep|Country Road
+195-208|Octoceras|Vulcani Underground Passage
+208-218|Laduro|Tunnel of Trials
+218-228|Lattecia|Boma Konda: Entrance
+228-235|Breppa|Algid Passage
+235-245|Bullamius|Storage Yard: Area 2
+245-256|Ignitrus|Vulcani Crater Base
