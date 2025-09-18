@@ -1,0 +1,32 @@
+name: Sync Eplib Content
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  sync-eplib:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout endlessparadox repo
+        uses: actions/checkout@v3
+
+      - name: Clone eplib repo
+        run: |
+          git clone https://x-access-token:${{ secrets.EPLIB_TOKEN }}@github.com/andrewtubalinal/eplib.git temp/eplib
+
+      - name: Copy .txt files from root of eplib to public/assets
+        run: |
+          mkdir -p public/assets
+          cp temp/eplib/*.txt public/assets/
+
+      - name: Commit updated .txt files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/assets/*.txt
+          git commit -m "📦 Sync .txt from eplib" || echo "No changes to commit"
+          git push
