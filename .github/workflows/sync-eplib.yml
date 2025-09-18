@@ -16,7 +16,7 @@ jobs:
 
       - name: Clone eplib repo
         run: |
-          git clone https://x-access-token:${{ secrets.EPLIB_TOKEN }}@github.com/andrewtubalinal/eplib.git temp/eplib
+          git clone https://x-access-token:${{ secrets.EPLIB_PAT }}@github.com/andrewtubalinal/eplib.git temp/eplib
 
       - name: Copy .txt files from root of eplib to public/assets
         run: |
