@@ -9,6 +9,9 @@ Void♤ <vgm>
 Arther Elf <vgm>
 MANGIT! <vgm>
 Kirara♡ <vgm>
+Argust <mem>
+ＪＩＡＮＧ <mem>
+NEZUKI <mem>
 Velphegorah <mem>
 {YamiPH}™ <mem>
 FireEmbleM <mem>
@@ -82,4 +85,5 @@ ZPortgas <mem>
 ☆Frosch☆ <mem>
 LikE <mem>
 No one yet <old>
+
 Test 
