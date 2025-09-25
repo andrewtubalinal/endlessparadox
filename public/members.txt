@@ -1,4 +1,4 @@
-「Ace_01」 <gm>
+「Ａｃｅ_０１」<gm>
 宇宙BlueFox™ I <vgm>
 V3zh <vgm>
 Jin Durian <vgm>
@@ -74,4 +74,5 @@ VenTus <mem>
 ZPortgas <mem>
 ★Frosch★ <mem>
 LiKE <mem>
+
 
