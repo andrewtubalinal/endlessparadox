@@ -39,7 +39,7 @@ const Photos = () => {
           <div key={year}>
             <h3>{year}</h3>
             <ul>
-              {["september-7", "september-9", "september-14", "september-21", "september-28"].map((folder) => (
+              {["september-7", "september-9", "september-14", "september-21", "september-28", "october-05"].map((folder) => (
                 <li key={folder}>
                   <button onClick={() => handleFolderClick(year, folder)}>{folder}</button>
                 </li>
