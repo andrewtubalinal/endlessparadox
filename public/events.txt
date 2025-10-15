@@ -1,10 +1,11 @@
-Guild Raid - Wind Element|2025-10-12|false
-Guild Raid - Fire Element|2025-10-05|false
+Guild Raid - Wind Element|2025-10-12|true
+Guild Raid - Fire Element|2025-10-05|true
 Guild Raid - Dark Element|2025-09-28|true
 Guild Raid - Water & Earth Element|2025-09-21|true
 Guild Raid - Wind Element|2025-09-14|true
 Guild Pictorial - Night Saltau Beach|2025-09-09|true
 Guild Raid - Fire Element|2025-09-07|true
+
 
 
 
